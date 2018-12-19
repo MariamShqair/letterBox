@@ -65,9 +65,9 @@ class StopWordsManager{
         this.storyAfterFreq=[]
      }
      incrementCount(word){
-        
-         if(this.storyAfterFreq.find(x => x.key === word)){
-             this.storyAfterFreq.find(x => x.key === word).count++
+        let find =this.storyAfterFreq.find(x => x.key === word)
+         if(find){
+             find.count++
          }else{
              this.storyAfterFreq.push({key:word,count:1})
          }
